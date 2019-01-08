@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<input type="number" placeholder="0" id="result">
+<br>
+
+<button onclick="getValue(this)">7</button>
+<button onclick="getValue(this)">8</button>
+<button onclick="getValue(this)">9</button>
+<button id="division" onclick="divide()">/</button>
+<br>
+<button onclick="getValue(this)">4</button>
+<button onclick="getValue(this)">5</button>
+<button onclick="getValue(this)">6</button>
+<button id="multiplication" onclick="multiply()">x</button>
+<br>
+<button onclick="getValue(this)">1</button>
+<button onclick="getValue(this)">2</button>
+<button onclick="getValue(this)">3</button>
+<button id="subtraction" onclick="subtract()">-</button>
+<br>
+<button onclick="getValue(this)">0</button>
+<button id="clear" onclick="Erase()">C</button>
+<button id="addition" onclick="add()">+</button>
+<button id="equals" onclick="result()">=</button>
+
+<script type="text/javascript">
+	let n = document.getElementByID('getValue');
+	let numberHolder;
+	let optr;
+	let value;
+
+	function getValue(e){
+		n.value += e.innerHTML;
+	}
+
+	function add(){
+		optr = "+";
+		numberHolder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function subtract(){
+		optr = "-"
+		numberHolder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function multiply(){
+		optr = "x"
+		numberHolder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function divide(){
+		optr = "/"
+		numberHolder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function result(){
+		switch (optr){
+			case "+":
+					n.value = numberHolder + parseInt(n.value);
+					break;
+			case "-":
+					n.value = numberHolder - parseInt(n.value);
+					break;
+			case "x":
+					n.value = numberHolder * parseInt(n.value);
+					break;
+			case "/":
+					n.value = numberHolder / parseInt(n.value);
+					break;
+			default:
+					console.log('no operator defined');
+					break;
+
+		}
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
