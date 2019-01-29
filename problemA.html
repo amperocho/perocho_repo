@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head> <link rel="stylesheet" type="text/css" href="problemA.css">
+	<title></title>
+</head>
+<body>
+
+	<table border="1">
+		<tr style="">
+			<td colspan="4"><input type="" name="" id="inputHere"></td>
+		</tr>
+		<tr style="column-span: 4">
+			<td><button id="one" type="button" onclick="attachNumber(this)">1</button></td>
+			<td><button id="two" type="button" onclick="attachNumber(this)">2</button></td>
+			<td><button id="three" type="button" onclick="attachNumber(this)">3</button></td>
+			<td><button id="plus" onclick="add()">+</button></td>
+		</tr>
+
+		<tr style="column-span: 4">
+			<td><button id="four" type="button" onclick="attachNumber(this)">4</button></td>
+			<td><button id="five" type="button" onclick="attachNumber(this)">5</button></td>
+			<td><button id="six" type="button" onclick="attachNumber(this)">6</button></td>
+			<td><button id="minus" onclick="minus()">-</button></td>
+		</tr>
+
+		<tr style="column-span: 4">
+			<td><button id="seven" type="button" onclick="attachNumber(this)">7</button></td>
+			<td><button id="eight" type="button" onclick="attachNumber(this)">8</button></td>
+			<td><button id="nine" type="button" onclick="attachNumber(this)">9</button></td>
+			<td><button id="times" onclick="multiply()">*</button></td>
+		</tr>
+
+		<tr style="column-span: 4">
+			<td><button id="clear">C</button></td>
+			<td><button id="exponent">=</button></td>
+			<td><button id="modulo">%</button></td>
+			<td><button id="divide" onclick="divide">/</button></td>
+		</tr>
+	</table>
+
+<script type="text/javascript">
+	let n = document.getElementById("ndisplay")
+	n1 = numberholder;
+	n2 = optr;
+
+// function attachNumber(e){
+// 	document.
+// }
+
+
+
+
+	function add{
+		optr = "+";
+		numberholder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function subtract{
+		optr = "-";
+		numberholder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function multiply{
+		optr = "*";
+		numberholder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function divide{
+		optr = "/";
+		numberholder = parseInt(n.value);
+		n.value = "";
+	}
+
+	function clear {
+		optr="";
+		n.value ="";
+
+		
+	}
+
+
+
+
+
+
+
+
+	function result{
+		switch (optr){
+
+			"+": add(); n.value = numberholder + parseInt(n.value); 
+			break;
+			"-": subtract(); n.value = numberholder - parseInt(n.value);
+			break;
+			"*": multiply(); n.value = numberholder * parseInt(n.value);
+			break;
+			"/": divide(); n.value = numberholder / parseInt(n.value);
+			break;
+			"C": clear(); 
+			break;
+			"=": exponent(); n.value = numberholder = parseInt(n.value);
+			break;
+			"%": modulo();n.value =  numberholder % parseInt(n.value);
+			break;
+
+
+
+
+		}
+
+	}
+	
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

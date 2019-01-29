@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	function loadThisDocu{
+
+
+	let xhttp = new XMLHttpRequest();
+	let list = document.getElementById('list');
+
+	xhttp.onreadystatechange();
+	if (xhtml.readystate == 4 && xhtml.status == 200) {
+		for (i=0; i < data.length; i++){
+			let data = JSON.parse(xhttp.Response());
+			console.log();
+			}	
+	}
+
+
+
+
+
+	xhtml.get('GET', "https://jsonplaceholder.typicode.com/todos", true);
+	xhtml.send();
+	
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

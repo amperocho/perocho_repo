@@ -1,0 +1,13 @@
+button{
+	column-span:5;
+	grid-row-gap: 6;
+	margin: 6px;
+	padding: 10px;
+	text-align: center;
+	outline-style: none;
+}
+
+td{
+	align: center;
+}
+
